@@ -1,16 +1,15 @@
 {
-  "name": "weather-report",
+  "name": "ol3-map-template",
   "version": "1.0.0",
-  "description": "A simple weather report map application",
+  "description": "Default map application template based on OpenLayers 3",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "grunt"
   },
   "keywords": [
-    "weather",
     "openlayers",
-    "leaflet",
+    "template",
     "map"
   ],
   "author": "Evgeny Shulkin <evgeny.shulkin@gmail.com>",

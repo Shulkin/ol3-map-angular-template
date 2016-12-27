@@ -1,1 +1,1 @@
-# weather-report
+# ol3-map-template

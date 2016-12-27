@@ -1,6 +1,5 @@
 angular.module("ol3.map.service", [])
-.factory("ol3Map", ["Cities", "WeatherData",
-  function(Cities, WeatherData) {
+.factory("ol3Map", [function() {
   // === Private ===
   var map = {}; // ol.Map
   var defaults = { // options
