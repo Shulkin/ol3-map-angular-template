@@ -1,13 +1,14 @@
 {
-  "name": "ol3-map-template",
+  "name": "ol3-map-angular-template",
   "version": "1.0.0",
-  "description": "Default map application template based on OpenLayers 3",
+  "description": "Default map application template based on OpenLayers 3 and Angular",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "grunt"
   },
   "keywords": [
+    "angular",
     "openlayers",
     "template",
     "map"

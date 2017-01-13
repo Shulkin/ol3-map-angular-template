@@ -1,1 +1,1 @@
-# ol3-map-template
+# ol3-map-angular-template
