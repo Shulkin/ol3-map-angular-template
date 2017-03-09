@@ -1,7 +1,7 @@
 // === Initialize ===
 // grab npm modules
-var express = require("express");
 var path = require("path");
+var express = require("express");
 var favicon = require("serve-favicon");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
@@ -11,21 +11,17 @@ var app = express();
 var port = process.env.PORT || 3000;
 // === Configure ===
 // set up express middleware
-/*
-// uncomment this when set up the favicon
-app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
-*/
-app.use(express.static(path.join(__dirname, "public")));
-app.use("/bower_components", express.static(path.join(__dirname, "bower_components")));
+app.use(favicon(path.join(__dirname, "build", "favicon.ico")));
+app.use(express.static(path.join(__dirname, "build")));
 app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json({type: "application/vnd.api+json"}));
 app.use(methodOverride());
-// default route to index.html
+// default route to build/index.html
 app.get("*", function(req ,res) {
   // anything else is up to Angular
-  res.sendFile("./public/index.html");
+  res.sendFile("build/index.html");
 });
 // === Start server ===
 app.listen(port);
