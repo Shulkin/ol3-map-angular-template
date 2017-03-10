@@ -1,7 +1,8 @@
 module.exports = {
-  entry: "assets/js/main.js",
+  entry: "./assets/js/main.js",
   output: {
-    filename: "build/bundle.js"
+    path: "./build",
+    filename: "bundle.js"
   },
   watch: true,
   module: {
@@ -10,8 +11,8 @@ module.exports = {
         // run any matched files through the babel loader
         test: /\.js$/,
         // do not look into node_modules
-        exclude: "/node_modules/",
-        loader: "babel",
+        exclude: /node_modules/,
+        loader: "babel-loader",
         query: {
           // use es2015 preset
           presets: ["es2015"]
@@ -19,8 +20,8 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: "/node_modules/",
-        loader: "style!css"
+        exclude: /node_modules/,
+        loader: "style-loader!css-loader"
       }
     ]
   }
