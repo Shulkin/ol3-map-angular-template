@@ -1,4 +1,4 @@
-require("../css/main.css");
+require("../css/main.scss");
 const name = "Evgeny";
 // show message after 300ms
 setTimeout(() => alert(`Hello, ${name}!`), 300);

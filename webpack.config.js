@@ -1,42 +1,43 @@
 var path = require("path");
-// path to node_modules folder
-var node_modules_dir = path.join(__dirname, "node_modules");
 var config = {
   context: __dirname,
-  // main entry point to our application
+  // main entry point to application
   entry: "./assets/js/main.js",
-  // path for output bundle
   output: {
-    path: path.join(__dirname, "build"),
+    // place output bundle here
+    path: path.resolve(__dirname, "build"),
     filename: "bundle.js"
   },
-  // build files on changes
+  // watch files for changes
   watch: true,
   module: {
-    loaders: [
-      { // allows to use ES 2015 features
-        // run any matched files through the babel loader
-        test: /\.js$/,
-        // do not look into node_modules
-        exclude: [node_modules_dir],
+    rules: [{
+      // allows to use ES 2015 features
+      test: /\.js$/,
+      // look only in javascript folder
+      include: [path.resolve(__dirname, "assets/js")],
+      use: {
+        // run through babel
         loader: "babel-loader",
-        query: {
+        options: {
           // use es2015 preset
           presets: ["es2015"]
         }
-      },
-      { // css files will be in bundle
-        test: /\.css$/,
-        exclude: [node_modules_dir],
-        // convert to css first, then apply style
-        loader: "style-loader!css-loader"
       }
-    ]
+    }, {
+      // bundle styles in output file
+      test: /\.(sass|scss)$/,
+      // look only in css folder
+      include: [path.resolve(__dirname, "assets/css")],
+      // the order of use is backward!
+      use: ["style-loader", "css-loader", "sass-loader"]
+    }]
   },
-  // configure webpack dev-server
+  // configure development server
   devServer: {
     // serve content from build folder
-    contentBase: path.join(__dirname, "build"),
+    contentBase: path.resolve(__dirname, "build"),
+    compress: true, // enable gzip compression
     port: 3001 // default port
   }
 };
