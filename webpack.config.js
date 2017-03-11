@@ -1,13 +1,13 @@
 var path = require("path");
+// path to node_modules folder
 var node_modules_dir = path.join(__dirname, "node_modules");
-
 var config = {
   context: __dirname,
   // main entry point to our application
   entry: "./assets/js/main.js",
   // path for output bundle
   output: {
-    path: path.resolve(__dirname, "./build"),
+    path: path.join(__dirname, "build"),
     filename: "bundle.js"
   },
   // build files on changes
@@ -35,8 +35,9 @@ var config = {
   },
   // configure webpack dev-server
   devServer: {
+    // serve content from build folder
+    contentBase: path.join(__dirname, "build"),
     port: 3001 // default port
   }
 };
-
 module.exports = config;
