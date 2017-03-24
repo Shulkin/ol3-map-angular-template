@@ -24,3 +24,9 @@ Build production
 ```bash
 $ npm run build
 ```
+
+Start server
+
+```bash
+$ npm start
+```

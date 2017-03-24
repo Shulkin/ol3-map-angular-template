@@ -1,4 +1,27 @@
-$primary-color: red;
-h1 {
-  color: $primary-color;
+/* Holy Grail Layout solved by Flexbox */
+body, .container {
+  display: flex;
+  flex-direction: column;
 }
+.panel-left {
+  order: -1;
+}
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    flex: 1;
+  }
+  .content {
+    flex: 1;
+  }
+  .panel-left, .panel-right {
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+  }
+}
+/* For debug */
+body {background-color: #be4545;}
+.container {background-color: #958249;}
+.content {background-color: #349c32;}
+.panel-left {background-color: #2232c3;}
+.panel-right {background-color: #ae2cb9;}
