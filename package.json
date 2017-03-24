@@ -15,6 +15,10 @@
     "template",
     "map"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shulkin/ol3-map-angular-template.git"
+  },
   "author": "Evgeny Shulkin <evgeny.shulkin@gmail.com>",
   "license": "ISC",
   "dependencies": {
