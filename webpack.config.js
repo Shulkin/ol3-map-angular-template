@@ -2,10 +2,10 @@ var path = require("path");
 var config = {
   context: __dirname,
   // main entry point to application
-  entry: "./assets/js/main.js",
+  entry: "./assets/js/app.js",
   output: {
     // place output bundle here
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "assets"),
     filename: "bundle.js"
   },
   // watch files for changes
@@ -35,8 +35,8 @@ var config = {
   },
   // configure development server
   devServer: {
-    // serve content from build folder
-    contentBase: path.resolve(__dirname, "build"),
+    // serve content from assets folder
+    contentBase: path.resolve(__dirname, "assets"),
     compress: true, // enable gzip compression
     port: 3001 // default port
   }

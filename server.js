@@ -11,8 +11,8 @@ var app = express();
 var port = process.env.PORT || 3000;
 // === Configure ===
 // set up express middleware
-app.use(favicon(path.join(__dirname, "build", "favicon.ico")));
-app.use(express.static(path.join(__dirname, "build")));
+app.use(favicon(path.join(__dirname, "assets", "favicon.ico")));
+app.use(express.static(path.join(__dirname, "assets")));
 app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -21,7 +21,7 @@ app.use(methodOverride());
 // default route to build/index.html
 app.get("*", function(req ,res) {
   // anything else is up to Angular
-  res.sendFile("build/index.html");
+  res.sendFile("assets/index.html");
 });
 // === Start server ===
 app.listen(port);
