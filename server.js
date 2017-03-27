@@ -11,8 +11,8 @@ var app = express();
 var port = process.env.PORT || 3000;
 // === Configure ===
 // set up express middleware
-app.use(favicon(path.join(__dirname, "assets", "favicon.ico")));
-app.use(express.static(path.join(__dirname, "assets")));
+app.use(favicon(path.resolve(__dirname, "assets", "favicon.ico")));
+app.use(express.static(path.resolve(__dirname, "assets")));
 app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({extended: true}));

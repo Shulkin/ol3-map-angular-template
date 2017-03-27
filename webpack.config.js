@@ -1,8 +1,9 @@
 var path = require("path");
 var config = {
-  context: __dirname,
+  // starting at assets folder
+  context: path.resolve(__dirname, "assets"),
   // main entry point to application
-  entry: "./assets/js/app.js",
+  entry: "./js/app.js",
   output: {
     // place output bundle here
     path: path.resolve(__dirname, "assets"),
