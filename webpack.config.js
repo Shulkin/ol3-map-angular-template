@@ -11,10 +11,11 @@ var config = {
   },
   // watch files for changes
   watch: true,
+  // load modules to process different files
   module: {
     rules: [{
       // allows to use ES 2015 features
-      test: /\.js$/,
+      test: /\.js$/, // look for js files
       // look only in javascript folder
       include: [path.resolve(__dirname, "assets/js")],
       use: {
@@ -27,12 +28,17 @@ var config = {
       }
     }, {
       // bundle styles in output file
-      test: /\.(sass|scss)$/,
+      test: /\.(sass|scss)$/, // look for sass
       // look only in css folder
       include: [path.resolve(__dirname, "assets/css")],
       // the order of use is backward!
       use: ["style-loader", "css-loader", "sass-loader"]
     }]
+  },
+  resolve: {
+    alias: {
+      handlebars: "handlebars/dist/handlebars.min.js"
+    }
   },
   // configure development server
   devServer: {
