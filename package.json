@@ -26,9 +26,8 @@
     "angular-ui-router": "^0.4.2",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "handlebars": "^4.0.6",
-    "helper-lorem": "^0.1.1",
     "jquery": "^3.1.1",
+    "lorem-ipsum": "^1.0.3",
     "method-override": "^2.3.7",
     "openlayers": "^4.0.1",
     "serve-favicon": "^2.3.2"
