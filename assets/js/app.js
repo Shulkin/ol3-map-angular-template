@@ -12,7 +12,8 @@ $(document).ready(function() {
   // place different sized lorem placeholders to main page elements
   $("header").html(lorem({count: 20, units: "words"}));
   $(".content").html(lorem({count: 3, units: "paragraphs"}));
-  $(".panel-left").html(lorem({count: 2, units: "paragraphs"}));
+  $("#layers-list").html(lorem({count: 1, units: "paragraphs"}));
+  $("#tools").html(lorem({count: 1, units: "paragraphs"}));
   $(".panel-right").html(lorem({count: 1, units: "paragraphs"}));
   $("footer").html(lorem({count: 10, units: "sentences"}));
 });
