@@ -19,6 +19,32 @@ body, .container {
     flex: 0 0 12em;
   }
 }
+/* General styles */
+html, body {
+  font-size: 16px;
+  font-weight: 300;
+  // temporary use Arial by default
+  font-family: "Arial", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+/* Add some default padding to content */
+header,
+.content,
+#layers-list,
+#tools,
+.panel-right,
+footer {
+  padding: .3em;
+}
+/* Resize handlers */
+.splitter-vertical {
+  width: 7px;
+  background-color: #b3b3b3;
+}
+.splitter-horizontal {
+  height: 7px;
+  background-color: #b3b3b3;
+}
 /* For debug */
 body {background-color: #be4545;}
 header {background-color: #cfc479;}

@@ -1,5 +1,6 @@
 /* === Main entry point to application === */
-require("../css/style.scss"); // require style
+// require style
+require("../css/style.scss");
 // load utilities
 var $ = require("jquery");
 // start application
@@ -12,8 +13,8 @@ $(document).ready(function() {
   // place different sized lorem placeholders to main page elements
   $("header").html(lorem({count: 20, units: "words"}));
   $(".content").html(lorem({count: 3, units: "paragraphs"}));
-  $("#layers-list").html(lorem({count: 1, units: "paragraphs"}));
-  $("#tools").html(lorem({count: 1, units: "paragraphs"}));
+  $("#layers-list").html(lorem({count: 1, units: "sentences"}));
+  $("#tools").html(lorem({count: 1, units: "sentences"}));
   $(".panel-right").html(lorem({count: 1, units: "paragraphs"}));
   $("footer").html(lorem({count: 10, units: "sentences"}));
 });

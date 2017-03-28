@@ -35,11 +35,6 @@ var config = {
       use: ["style-loader", "css-loader", "sass-loader"]
     }]
   },
-  resolve: {
-    alias: {
-      handlebars: "handlebars/dist/handlebars.min.js"
-    }
-  },
   // configure development server
   devServer: {
     // serve content from assets folder

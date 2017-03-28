@@ -7,14 +7,25 @@
   <body>
     <header></header>
     <div class="container">
+      <div class="splitter-vertical">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      </div>
       <main class="content"></main>
       <div class="panel-left">
         <div id="layers-list"></div>
+        <div class="splitter-horizontal">
+          <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+        </div>
         <div id="tools"></div>
+      </div>
+      <div class="splitter-vertical">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
       </div>
       <div class="panel-right"></div>
     </div>
     <footer></footer>
+    <!-- Load Font Awesome from CDN, better move to app.js as require() -->
+    <script src="https://use.fontawesome.com/302bf40af4.js"></script>
     <!-- All javascript and styles in one bundle -->
     <script src="bundle.js"></script>
   </body>
