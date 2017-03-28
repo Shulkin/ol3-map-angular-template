@@ -36,6 +36,29 @@ header,
 footer {
   padding: .3em;
 }
+/* Default divs size */
+.content {
+  min-height: 400px;
+}
+#layers-list {
+  min-height: 250px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+#tools {
+  min-height: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.panel-right {
+  min-height: 450px;
+  /*
+   * #layer-list.max-height + #tools.max-height
+   * Plus, some paddings and resize handlebar width
+   */
+  max-height: 668px;
+  overflow-y: auto;
+}
 /* Resize handlers */
 .splitter {
   // center resize icon
@@ -44,6 +67,7 @@ footer {
   justify-content: center;
   // cool gray background
   background-color: #b3b3b3;
+  padding: 1px;
 }
 .sp-vertical {
   width: 7px;
@@ -52,6 +76,9 @@ footer {
 .sp-horizontal {
   height: 7px;
   cursor: ns-resize;
+}
+.content {
+  resize: both;
 }
 /* For debug */
 body {background-color: #be4545;}
