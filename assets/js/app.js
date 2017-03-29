@@ -11,10 +11,10 @@ $(document).ready(function() {
   // load module to generate lorem ipsum text
   var lorem = require("lorem-ipsum");
   // place different sized lorem placeholders to main page elements
-  $("header").html(lorem({count: 20, units: "words"}));
-  $(".content").html(lorem({count: 3, units: "paragraphs"}));
+  $("header").html(lorem({count: 5, units: "sentences"}));
+  $(".content").html(lorem({count: 20, units: "paragraphs"}));
   $("#layers-list").html(lorem({count: 5, units: "paragraphs"}));
-  $("#tools").html(lorem({count: 7, units: "paragraphs"}));
+  $("#tools").html(lorem({count: 5, units: "paragraphs"}));
   $(".panel-right").html(lorem({count: 10, units: "paragraphs"}));
-  $("footer").html(lorem({count: 10, units: "sentences"}));
+  $("footer").html(lorem({count: 7, units: "sentences"}));
 });

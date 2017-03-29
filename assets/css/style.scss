@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 /* Holy Grail Layout solved by Flexbox */
 body, .container {
   display: flex;
@@ -27,7 +30,7 @@ html, body {
   font-family: "Arial", sans-serif;
   text-rendering: optimizeLegibility;
 }
-/* Add some default padding to content */
+/* Add some default padding to content in divs */
 header,
 .content,
 #layers-list,
@@ -37,9 +40,6 @@ footer {
   padding: .3em;
 }
 /* Default divs size */
-.content {
-  min-height: 400px;
-}
 #layers-list {
   min-height: 250px;
   max-height: 350px;
@@ -50,13 +50,11 @@ footer {
   max-height: 300px;
   overflow-y: auto;
 }
-.panel-right {
-  min-height: 450px;
-  /*
-   * #layer-list.max-height + #tools.max-height
-   * Plus, some paddings and resize handlebar width
-   */
-  max-height: 668px;
+.content, .panel-right {
+  // #layer-list.min-height + #tools.min-height + .sp-horizontal.height
+  min-height: 460px;
+  // #layer-list.max-height + #tools.max-height + .sp-horizontal.height
+  max-height: 660px;
   overflow-y: auto;
 }
 /* Resize handlers */
@@ -67,18 +65,14 @@ footer {
   justify-content: center;
   // cool gray background
   background-color: #b3b3b3;
-  padding: 1px;
 }
 .sp-vertical {
-  width: 7px;
+  width: 10px;
   cursor: ew-resize;
 }
 .sp-horizontal {
-  height: 7px;
+  height: 10px;
   cursor: ns-resize;
-}
-.content {
-  resize: both;
 }
 /* For debug */
 body {background-color: #be4545;}
