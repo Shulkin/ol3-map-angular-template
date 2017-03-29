@@ -3,11 +3,11 @@
 require("../css/style.scss");
 // load utilities
 var $ = require("jquery");
+// save for jQuery plugins
+window.jQuery = $;
+window.$ = $;
 // start application
 $(document).ready(function() {
-  const name = "Evgeny";
-  // show message after 300ms
-  setTimeout(() => alert(`Hello, ${name}!`), 300);
   // load module to generate lorem ipsum text
   var lorem = require("lorem-ipsum");
   // place different sized lorem placeholders to main page elements
@@ -17,7 +17,19 @@ $(document).ready(function() {
   $("#tools").html(lorem({count: 5, units: "paragraphs"}));
   $(".panel-right").html(lorem({count: 10, units: "paragraphs"}));
   $("footer").html(lorem({count: 7, units: "sentences"}));
+  //--
+  require("jquery-resizable-dom");
+  $("#layers-list").resizable({
+    handleSelector: "#sp-layers",
+    resizeWidth: false
+  });
+  $(".panel-left").resizable({
+    handleSelector: "#sp-left",
+    resizeHeight: false
+  });
+  //--
   // create mouse handlers for resize spliters
+  /*
   $("#sp-left").on("mousedown", function(e) {
     $(this).data("mousedown", true);
   }).on("mousemove", function(e) {
@@ -36,4 +48,5 @@ $(document).ready(function() {
   }).on("mouseup", function(e) {
     $(this).data("mousedown", false);
   });
+  */
 });
