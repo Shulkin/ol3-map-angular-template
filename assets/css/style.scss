@@ -24,19 +24,16 @@ body, .container {
 }
 /* General styles */
 html, body {
+  // base font size and weight
   font-size: 16px;
   font-weight: 300;
   // temporary use Arial by default
   font-family: "Arial", sans-serif;
   text-rendering: optimizeLegibility;
 }
-/* Add some default padding to content in divs */
-header,
-.content,
-#layers-list,
-#tools,
-.panel-right,
-footer {
+/* Add some default padding to divs content */
+header, .content, #layers-list,
+#tools, .panel-right, footer {
   padding: .3em;
 }
 /* Default divs size */
@@ -50,12 +47,17 @@ footer {
   max-height: 300px;
   overflow-y: auto;
 }
+/*
+ * Main content and right panel have the same height.
+ * Equals to combined height of layers list and tools panel.
+ */
 .content, .panel-right {
   // #layer-list.min-height + #tools.min-height + .sp-horizontal.height
   min-height: 460px;
   // #layer-list.max-height + #tools.max-height + .sp-horizontal.height
   max-height: 660px;
   overflow-y: auto;
+  // header and footer can be any height
 }
 /* Resize handlers */
 .splitter {

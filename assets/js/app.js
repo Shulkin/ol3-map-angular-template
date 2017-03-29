@@ -17,4 +17,23 @@ $(document).ready(function() {
   $("#tools").html(lorem({count: 5, units: "paragraphs"}));
   $(".panel-right").html(lorem({count: 10, units: "paragraphs"}));
   $("footer").html(lorem({count: 7, units: "sentences"}));
+  // create mouse handlers for resize spliters
+  $("#sp-left").on("mousedown", function(e) {
+    $(this).data("mousedown", true);
+  }).on("mousemove", function(e) {
+    if ($(this).data("mousedown")) {
+      console.log("Dragging left splitter...");
+    }
+  }).on("mouseup", function(e) {
+    $(this).data("mousedown", false);
+  });
+  $("#sp-right").on("mousedown", function(e) {
+    $(this).data("mousedown", true);
+  }).on("mousemove", function(e) {
+    if ($(this).data("mousedown")) {
+      console.log("Dragging right splitter...");
+    }
+  }).on("mouseup", function(e) {
+    $(this).data("mousedown", false);
+  });
 });
