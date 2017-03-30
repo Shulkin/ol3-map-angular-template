@@ -8,14 +8,10 @@ window.jQuery = $;
 window.$ = $;
 // start application
 $(document).ready(function() {
-  // load module to generate lorem ipsum text
-  var lorem = require("lorem-ipsum");
-  // place different sized lorem placeholders to main page elements
-  $("header").html(lorem({count: 5, units: "paragraphs"}));
-  $(".panel-left").html(lorem({count: 10, units: "paragraphs"}));
-  $(".content").html(lorem({count: 20, units: "paragraphs"}));
-  $(".panel-right").html(lorem({count: 10, units: "paragraphs"}));
-  $("footer").html(lorem({count: 7, units: "paragraphs"}));
+  // fill element with random lorem ipsum
+  var debug = require("./debug.js");
+  // presets: small, big, big-left, big-content, big-right
+  debug.generateLorem("big-right");
   /* ======================================================== */
   /* OUTDATED */
   /* ======================================================== */
