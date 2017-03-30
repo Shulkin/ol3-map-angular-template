@@ -54,6 +54,36 @@ header, footer {
   min-height: 100px;
   overflow-y: hidden;
 }
+/* Resize handlers */
+.splitter {
+  // center resize icon
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // cool gray background
+  background-color: #b3b3b3;
+  // add top margin to match other container elements
+  margin: 0.25em 0;
+}
+.sp-vertical {
+  width: 10px;
+  cursor: ew-resize;
+}
+.sp-horizontal {
+  height: 10px;
+  cursor: ns-resize;
+}
+/* Delete unnecessary horizontal margins for container elements */
+.panel-left {
+  margin-right: 0;
+}
+.content {
+  margin-right: 0;
+  margin-left: 0;
+}
+.panel-right {
+  margin-left: 0;
+}
 /* For debug */
 body {background-color: #eee;}
 header {background-color: #db5252;}
