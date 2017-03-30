@@ -4,14 +4,23 @@
     <meta charset="utf-8">
     <title>ol3-map-angular-template</title>
   </head>
-  <body class="vbox viewport">
+  <body class="flex-column">
     <header></header>
-    <div class="container hbox space-between">
+    <div class="container flex-row space-between">
       <div class="panel-left"></div>
+      <div class="splitter sp-vertical" id="sp-left">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      </div>
       <main class="content"></main>
+      <div class="splitter sp-vertical" id="sp-right">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      </div>
       <div class="panel-right"></div>
     </div>
     <footer></footer>
+    <!-- ======================================================== -->
+    <!-- OUTDATED -->
+    <!-- ======================================================== -->
     <!--
     <header></header>
     <div class="container">

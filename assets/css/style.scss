@@ -4,6 +4,10 @@
 }
 /* General styles */
 html, body {
+  // force fullscreen on viewport
+  width: 100%;
+  height: 100%;
+  margin: 0;
   // base font size and weight
   font-size: 16px;
   font-weight: 300;
@@ -13,26 +17,20 @@ html, body {
 }
 header, footer,
 .panel-left, .content, .panel-right {
-  // default margin and padding
+  // main elements margin and padding
   margin: 0.25em;
   padding: 0.25em;
-  border: 1px solid black;
+  border: 1px solid #888;
   // scroll overflow content
   overflow-y: auto;
 }
-/* Force full width and height on viewport */
-html, body, .viewport {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
 /* Items flex vertically */
-.vbox {
+.flex-column {
   display: flex;
   flex-direction: column;
 }
 /* Items flex horizontally */
-.hbox {
+.flex-row {
   display: flex;
   flex-direction: row;
 }
@@ -47,15 +45,26 @@ html, body, .viewport {
 header, footer {
   height: 100px;
 }
+/* Other elements flex */
+.container {flex: 1;}
+.content {flex: 5;}
+.panel-left, .panel-right {flex: 1;}
+/* Limit content container height */
 .container {
-  flex: 1;
+  min-height: 100px;
+  overflow-y: hidden;
 }
-.content {
-  flex: 5;
-}
-.panel-left, .panel-right {
-  flex: 1;
-}
+/* For debug */
+body {background-color: #eee;}
+header {background-color: #db5252;}
+.container {background-color: #e478bf;}
+.panel-left {background-color: #dfda64;}
+.content {background-color: #27cc5a;}
+.panel-right {background-color: #6fb8ed;}
+footer {background-color: #e29f2e;}
+/* ======================================================== */
+/* OUTDATED */
+/* ======================================================== */
 /* Holy Grail Layout solved by Flexbox */
 /*
 body, .container {
@@ -144,14 +153,14 @@ header, .content, #layers-list,
 }
 */
 /* For debug */
+/*
 body {background-color: #be4545;}
 header {background-color: #cfc479;}
 .container {background-color: #958249;}
 .panel-left {background-color: #2232c3;}
-/*
 #layers-list {background-color: #189f5a;}
 #tools {background-color: #a9dd60;}
-*/
 .content {background-color: #349c32;}
 .panel-right {background-color: #ae2cb9;}
 footer {background-color: #d183a1;}
+*/
