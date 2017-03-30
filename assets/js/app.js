@@ -10,8 +10,12 @@ window.$ = $;
 $(document).ready(function() {
   // fill element with random lorem ipsum
   var debug = require("./debug.js");
-  // presets: small, big, big-left, big-content, big-right
-  debug.generateLorem("big-right");
+  // small, big, big-left, big-content, big-right
+  debug.generateLorem("small");
+  $(".panel-left").resizable({
+    handleSelector: "#sp-left",
+    resizeHeight: false
+  });
   /* ======================================================== */
   /* OUTDATED */
   /* ======================================================== */

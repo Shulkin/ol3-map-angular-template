@@ -47,8 +47,15 @@ header, footer {
 }
 /* Other elements flex */
 .container {flex: 1;}
-.content {flex: 5;}
-.panel-left, .panel-right {flex: 1;}
+.content {
+  // flex: 5;
+  flex: 1;
+}
+.panel-left, .panel-right {
+  // flex: 1;
+  // 12em is the width of the columns
+  flex: 0 0 10em;
+}
 /* Limit content container height */
 .container {
   min-height: 100px;
@@ -61,16 +68,22 @@ header, footer {
   align-items: center;
   justify-content: center;
   // cool gray background
-  background-color: #b3b3b3;
+  background-color: #d7d7d7;
   // add top margin to match other container elements
   margin: 0.25em 0;
+  // add borders on top and bottom
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+}
+.splitter:hover {
+  background-color: #b8b8b8;
 }
 .sp-vertical {
-  width: 10px;
+  width: 0.5em;
   cursor: ew-resize;
 }
 .sp-horizontal {
-  height: 10px;
+  height: 0.5em;
   cursor: ns-resize;
 }
 /* Delete unnecessary horizontal margins for container elements */
