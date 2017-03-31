@@ -24,36 +24,6 @@ header, footer,
   // scroll overflow content
   overflow-y: auto;
 }
-/* Items flex vertically */
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-/* Items flex horizontally */
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-.space-between {
-  justify-content: space-between;
-}
-/*
- * Fullscreen Holy Grail Flexbox layout.
- * More here: http://bl.ocks.org/jfsiii/5380802
- */
-/* Header and footer fixed height */
-header, footer {height: 5em;}
-/* Container flex between header and footer */
-.container {flex: 1;}
-/* Side panels fixed width */
-.panel-left, .panel-right {width: 5em;}
-/* Content flex between left and right panels */
-.content {flex: 1;}
-/* Limit content container height */
-.container {
-  min-height: 100px;
-  overflow-y: hidden;
-}
 /* Resize handlers */
 .splitter {
   // center resize icon

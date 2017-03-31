@@ -1,6 +1,7 @@
 /* === Main entry point to application === */
-// require style
+// require styles
 require("../css/style.scss");
+require("../css/layout.scss");
 // load utilities
 var $ = require("jquery");
 // save for jQuery plugins
