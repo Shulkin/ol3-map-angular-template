@@ -9,10 +9,15 @@ window.jQuery = $;
 window.$ = $;
 // start application
 $(document).ready(function() {
-  // fill element with random lorem ipsum
+  // fill elements with random lorem ipsum
   var debug = require("./debug.js");
-  // small, big, big-left, big-content, big-right
-  debug.generateLorem("small");
+  debug.generateLorem([
+    {target: $("header"), preset: "few"},
+    {target: $(".panel-left"), preset: "medium"},
+    {target: $(".content"), preset: "big"},
+    {target: $(".panel-right"), preset: "medium"},
+    {target: $("footer"), preset: "few"},
+  ]);
   /*
    * Use small jQuery plugin by Rick Strahl to make DOM elements resizable
    * More here: https://github.com/RickStrahl/jquery-resizable
