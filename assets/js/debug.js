@@ -1,7 +1,8 @@
+/* Export various functions for debug purposes */
 module.exports = (function() {
   // load module to generate lorem ipsum text
   var lorem = require("lorem-ipsum");
-  // fill up elements depending on preset
+  // fill up DOM elements width lorem ipsum depending on preset
   var generateLorem = function(preset) {
     // do not require jQuery because we saved it in global object
     switch (preset) {

@@ -42,36 +42,13 @@ header, footer,
  * More here: http://bl.ocks.org/jfsiii/5380802
  */
 /* Header and footer fixed height */
-header, footer {
-  // max-height: 5em;
-  height: 5em;
-}
+header, footer {height: 5em;}
 /* Container flex between header and footer */
-.container {
-  flex: 1;
-}
+.container {flex: 1;}
 /* Side panels fixed width */
-.panel-left, .panel-right {
-  /* 10em is the fixed width of the columns */
-  // flex: 0 0 10em;
-  /* Side panels takes remaining 25% each */
-  // flex: 25%;
-  /* Takes remaining 1 compared to content 2 */
-  // flex: 1;
-  // width: 12em;
-  // flex: 1 1 10em;
-  width: 5em;
-}
+.panel-left, .panel-right {width: 5em;}
 /* Content flex between left and right panels */
-.content {
-  /* Content flex between left and right panels */
-  // flex: 1;
-  /* Content takes 50% of container width */
-  // flex: 50%;
-  /* Content fill container width as 2:1 */
-  // flex: 2;
-  flex: 1;
-}
+.content {flex: 1;}
 /* Limit content container height */
 .container {
   min-height: 100px;

@@ -11,47 +11,21 @@ $(document).ready(function() {
   // fill element with random lorem ipsum
   var debug = require("./debug.js");
   // small, big, big-left, big-content, big-right
-  debug.generateLorem("big");
-  $(".panel-left").resizable({
-    handleSelector: "#sp-left",
-    resizeHeight: false
-  });
-  /* ======================================================== */
-  /* OUTDATED */
-  /* ======================================================== */
+  debug.generateLorem("small");
   /*
+   * Use small jQuery plugin by Rick Strahl to make DOM elements resizable
+   * More here: https://github.com/RickStrahl/jquery-resizable
+   */
   require("jquery-resizable-dom");
-  $("#layers-list").resizable({
-    handleSelector: "#sp-layers",
-    resizeWidth: false
-  });
+  // side panels resizable
   $(".panel-left").resizable({
     handleSelector: "#sp-left",
+    resizeWidthFrom: "right",
     resizeHeight: false
   });
-  */
-  //$("#layers-list").html(lorem({count: 5, units: "paragraphs"}));
-  //$("#tools").html(lorem({count: 5, units: "paragraphs"}));
-  //--
-  // create mouse handlers for resize spliters
-  /*
-  $("#sp-left").on("mousedown", function(e) {
-    $(this).data("mousedown", true);
-  }).on("mousemove", function(e) {
-    if ($(this).data("mousedown")) {
-      console.log("Dragging left splitter...");
-    }
-  }).on("mouseup", function(e) {
-    $(this).data("mousedown", false);
+  $(".panel-right").resizable({
+    handleSelector: "#sp-right",
+    resizeWidthFrom: "left",
+    resizeHeight: false
   });
-  $("#sp-right").on("mousedown", function(e) {
-    $(this).data("mousedown", true);
-  }).on("mousemove", function(e) {
-    if ($(this).data("mousedown")) {
-      console.log("Dragging right splitter...");
-    }
-  }).on("mouseup", function(e) {
-    $(this).data("mousedown", false);
-  });
-  */
 });
