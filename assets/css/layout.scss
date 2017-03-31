@@ -3,19 +3,19 @@
  * More here: http://bl.ocks.org/jfsiii/5380802
  */
 /* Items flex vertically */
- .flex-column {
-   display: flex;
-   flex-direction: column;
- }
- /* Items flex horizontally */
- .flex-row {
-   display: flex;
-   flex-direction: row;
- }
- /* With space between them */
- .space-between {
-   justify-content: space-between;
- }
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+/* Items flex horizontally */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+/* With space between them */
+.space-between {
+  justify-content: space-between;
+}
 /* Header and footer fixed height */
 header, footer {height: 5em;}
 /* Container flex between header and footer */
@@ -24,8 +24,3 @@ header, footer {height: 5em;}
 .panel-left, .panel-right {width: 5em;}
 /* Content flex between panels */
 .content {flex: 1;}
-/* Limit container height */
-.container {
-  min-height: 100px;
-  overflow-y: hidden;
-}

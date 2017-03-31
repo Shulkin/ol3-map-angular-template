@@ -1,10 +1,10 @@
-/* Elements dimensions not affected by padding and borders */
+/* Dimensions not affected by padding and borders */
 * {
   box-sizing: border-box;
 }
 /* General styles */
 html, body {
-  // force fullscreen on viewport
+  // force fullscreen viewport
   width: 100%;
   height: 100%;
   margin: 0;
@@ -24,9 +24,13 @@ header, footer,
   // scroll overflow content
   overflow-y: auto;
 }
+/* Limit container height */
+.container {
+  min-height: 100px;
+  overflow-y: hidden;
+}
 /* Resize handlers */
 .splitter {
-  // center resize icon
   display: flex;
   // cool gray background
   background-color: #d7d7d7;
@@ -51,7 +55,7 @@ header, footer,
   height: 0.5em;
   cursor: ns-resize;
 }
-/* Delete unnecessary horizontal margins for container elements */
+/* Delete unnecessary horizontal margins for elements in container */
 .panel-left {
   margin-right: 0;
 }
