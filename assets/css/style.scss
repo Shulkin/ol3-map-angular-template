@@ -43,18 +43,34 @@ header, footer,
  */
 /* Header and footer fixed height */
 header, footer {
-  height: 100px;
+  // max-height: 5em;
+  height: 5em;
 }
-/* Other elements flex */
-.container {flex: 1;}
-.content {
-  // flex: 5;
+/* Container flex between header and footer */
+.container {
   flex: 1;
 }
+/* Side panels fixed width */
 .panel-left, .panel-right {
+  /* 10em is the fixed width of the columns */
+  // flex: 0 0 10em;
+  /* Side panels takes remaining 25% each */
+  // flex: 25%;
+  /* Takes remaining 1 compared to content 2 */
   // flex: 1;
-  // 12em is the width of the columns
-  flex: 0 0 10em;
+  // width: 12em;
+  // flex: 1 1 10em;
+  width: 5em;
+}
+/* Content flex between left and right panels */
+.content {
+  /* Content flex between left and right panels */
+  // flex: 1;
+  /* Content takes 50% of container width */
+  // flex: 50%;
+  /* Content fill container width as 2:1 */
+  // flex: 2;
+  flex: 1;
 }
 /* Limit content container height */
 .container {
@@ -65,8 +81,6 @@ header, footer {
 .splitter {
   // center resize icon
   display: flex;
-  align-items: center;
-  justify-content: center;
   // cool gray background
   background-color: #d7d7d7;
   // add top margin to match other container elements
@@ -74,6 +88,10 @@ header, footer {
   // add borders on top and bottom
   border-top: 1px solid #888;
   border-bottom: 1px solid #888;
+}
+.splitter i {
+  // this works because we set display flex in parent
+  margin: auto; // center resize icon in splitter
 }
 .splitter:hover {
   background-color: #b8b8b8;
