@@ -12,11 +12,11 @@ $(document).ready(function() {
   // fill elements with random lorem ipsum
   var debug = require("./debug.js");
   debug.generateLorem([
-    {target: $("header"), preset: "few"},
+    {target: $("header"), preset: "medium"},
     {target: $(".panel-left"), preset: "medium"},
     {target: $(".content"), preset: "big"},
     {target: $(".panel-right"), preset: "medium"},
-    {target: $("footer"), preset: "few"},
+    {target: $("footer"), preset: "medium"}
   ]);
   /*
    * Use small jQuery plugin by Rick Strahl to make DOM elements resizable
