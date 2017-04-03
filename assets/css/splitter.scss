@@ -1,0 +1,29 @@
+/* Resize handlers */
+.splitter {
+  display: flex;
+  // cool gray background
+  background-color: #d7d7d7;
+}
+.splitter i {
+  // this works because we set display flex in parent
+  margin: auto; // center resize icon in splitter
+}
+.splitter:hover {
+  background-color: #b8b8b8;
+}
+.sp-vertical {
+  width: .5em;
+  cursor: ew-resize;
+  // add border on top and bottom
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+}
+.sp-horizontal {
+  height: .5em;
+  cursor: ns-resize;
+  // add border on left
+  border-left: 1px solid #888;
+}
+.sp-horizontal i {
+  margin-top: -3px;
+}
