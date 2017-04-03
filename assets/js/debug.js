@@ -16,7 +16,7 @@ module.exports = (function() {
         break;
     }
   }
-  // fill up DOM elements width lorem ipsum depending on preset
+  // fill up DOM elements with lorem ipsum depending on preset
   var generateLorem = function(array) {
     array.forEach(function(entry) {
       generateLoremElement(entry.target, entry.preset);

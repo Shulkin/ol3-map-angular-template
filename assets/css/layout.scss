@@ -21,6 +21,12 @@ header, footer {height: 5em;}
 /* Container flex between header and footer */
 .container {flex: 1;}
 /* Side panels fixed width */
-.panel-left, .panel-right {width: 5em;}
-/* Content flex between panels */
+.panel-left, .panel-right {width: 15em;}
+// Content in left panel flex equally
+#layers-list, #tools {flex: 1;}
+/* Main content flex between panels */
 .content {flex: 1;}
+/* Limit panels width */
+.content, .panel-left, .panel-right {
+  min-width: 8em;
+}

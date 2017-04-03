@@ -15,30 +15,31 @@ html, body {
   font-family: "Arial", sans-serif;
   text-rendering: optimizeLegibility;
 }
-header, footer,
-.panel-left, .content, .panel-right {
-  // main elements margin and padding
-  margin: 0.25em;
-  padding: 0.25em;
+header, footer {
+  margin: .25em;
+  padding: .25em;
   border: 1px solid #888;
   // scroll overflow content
   overflow-y: auto;
 }
-/* Limit container height */
 .container {
+  margin: 0 .25em;
+  // limit container height
   min-height: 100px;
   overflow-y: hidden;
+}
+.content, .panel-right,
+#layers-list, #tools {
+  padding: .25em;
+  border: 1px solid #888;
+  // scroll overflow content
+  overflow-y: auto;
 }
 /* Resize handlers */
 .splitter {
   display: flex;
   // cool gray background
   background-color: #d7d7d7;
-  // add top margin to match other container elements
-  margin: 0.25em 0;
-  // add borders on top and bottom
-  border-top: 1px solid #888;
-  border-bottom: 1px solid #888;
 }
 .splitter i {
   // this works because we set display flex in parent
@@ -48,29 +49,28 @@ header, footer,
   background-color: #b8b8b8;
 }
 .sp-vertical {
-  width: 0.5em;
+  width: .5em;
   cursor: ew-resize;
+  // add border on top and bottom
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
 }
 .sp-horizontal {
-  height: 0.5em;
+  height: .5em;
   cursor: ns-resize;
+  // add border on left
+  border-left: 1px solid #888;
 }
-/* Delete unnecessary horizontal margins for elements in container */
-.panel-left {
-  margin-right: 0;
+.sp-horizontal i {
+  margin-top: -3px;
 }
-.content {
-  margin-right: 0;
-  margin-left: 0;
-}
-.panel-right {
-  margin-left: 0;
-}
-/* For debug */
+/* Color containers for debug */
 body {background-color: #eee;}
 header {background-color: #db5252;}
 .container {background-color: #e478bf;}
-.panel-left {background-color: #dfda64;}
+.panel-left {background-color: #519129;}
+#layers-list {background-color: #4e7141;}
+#tools {background-color: #a82450;}
 .content {background-color: #27cc5a;}
 .panel-right {background-color: #6fb8ed;}
 footer {background-color: #e29f2e;}

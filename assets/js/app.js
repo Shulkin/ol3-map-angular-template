@@ -13,7 +13,8 @@ $(document).ready(function() {
   var debug = require("./debug.js");
   debug.generateLorem([
     {target: $("header"), preset: "medium"},
-    {target: $(".panel-left"), preset: "medium"},
+    {target: $("#layers-list"), preset: "big"},
+    {target: $("#tools"), preset: "big"},
     {target: $(".content"), preset: "big"},
     {target: $(".panel-right"), preset: "medium"},
     {target: $("footer"), preset: "medium"}
