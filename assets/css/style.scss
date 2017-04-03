@@ -1,4 +1,4 @@
-/* Dimensions not affected by padding and borders */
+/* Dimensions not affected by padding and border */
 * {box-sizing: border-box;}
 /* General styles */
 html, body {
@@ -15,21 +15,24 @@ html, body {
 }
 header, footer {
   margin: .25em;
-  padding: .25em;
-  border: 1px solid #888;
-  // scroll overflow content
-  overflow-y: auto;
 }
-.container {
-  margin: 0 .25em;
-  // limit container height
-  min-height: 100px;
-  overflow-y: hidden;
-}
+header, footer,
 .content, .panel-right,
 #layers-list, #tools {
   padding: .25em;
   border: 1px solid #888;
   // scroll overflow content
   overflow-y: auto;
+  overflow-x: hidden;
+}
+/* Scroll content in left panel */
+.panel-left {
+  // just in case we make screen height too small
+  overflow-y: auto;
+}
+.container {
+  margin: 0 .25em;
+  // limit container height
+  min-height: 6.25em;
+  overflow-y: hidden;
 }

@@ -1,6 +1,8 @@
 /* Resize handlers */
 .splitter {
   display: flex;
+  // fixed size .5em, do not grow, do not shrink
+  flex: 0 0 .5em;
   // cool gray background
   background-color: #d7d7d7;
 }
@@ -12,18 +14,17 @@
   background-color: #b8b8b8;
 }
 .sp-vertical {
-  width: .5em;
   cursor: ew-resize;
   // add border on top and bottom
   border-top: 1px solid #888;
   border-bottom: 1px solid #888;
 }
 .sp-horizontal {
-  height: .5em;
   cursor: ns-resize;
   // add border on left
   border-left: 1px solid #888;
 }
+/* Fix icon position in horizontal splitter */
 .sp-horizontal i {
   margin-top: -3px;
 }

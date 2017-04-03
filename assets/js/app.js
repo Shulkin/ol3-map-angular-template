@@ -2,6 +2,8 @@
 // require styles
 require("../css/style.scss");
 require("../css/layout.scss");
+require("../css/splitter.scss");
+require("../css/colors.scss");
 // load utilities
 var $ = require("jquery");
 // save for jQuery plugins
@@ -34,5 +36,10 @@ $(document).ready(function() {
     handleSelector: "#sp-right",
     resizeWidthFrom: "left",
     resizeHeight: false
+  });
+  // content in left panel resizable
+  $("#layers-list").resizable({
+    handleSelector: "#sp-layers",
+    resizeWidth: false
   });
 });

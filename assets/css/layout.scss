@@ -13,20 +13,22 @@
   flex-direction: row;
 }
 /* With space between them */
-.space-between {
-  justify-content: space-between;
-}
+.space-between {justify-content: space-between;}
 /* Header and footer fixed height */
 header, footer {height: 5em;}
 /* Container flex between header and footer */
 .container {flex: 1;}
-/* Side panels fixed width */
+/* Side panels fixed width, resizable */
 .panel-left, .panel-right {width: 15em;}
-// Content in left panel flex equally
-#layers-list, #tools {flex: 1;}
+/* layers list fixed height, resizable */
+#layers-list {height: 15em;}
+/* Tools takes remaining space in left panel */
+#tools {flex: 1;}
+/* Limit elements height in left panel */
+#layers-list, #tools {min-height: 8em;}
 /* Main content flex between panels */
 .content {flex: 1;}
-/* Limit panels width */
+/* Limit elements width in container */
 .content, .panel-left, .panel-right {
   min-width: 8em;
 }
