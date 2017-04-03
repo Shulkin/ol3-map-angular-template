@@ -26,16 +26,28 @@ $(document).ready(function() {
    * More here: https://github.com/RickStrahl/jquery-resizable
    */
   require("jquery-resizable-dom");
+  // define onDrag callback
+  var onDrag = function (e, $el, newWidth, newHeight, opt) {
+    if ($(".content").width() <= 118) {
+      if (newWidth < $el.width()) {
+        $el.width(newWidth);
+      } else {
+        return false;
+      }
+    }
+  };
   // side panels resizable
   $(".panel-left").resizable({
     handleSelector: "#sp-left",
     resizeWidthFrom: "right",
-    resizeHeight: false
+    resizeHeight: false,
+    onDrag: onDrag
   });
   $(".panel-right").resizable({
     handleSelector: "#sp-right",
     resizeWidthFrom: "left",
-    resizeHeight: false
+    resizeHeight: false,
+    onDrag: onDrag
   });
   // content in left panel resizable
   $("#layers-list").resizable({
