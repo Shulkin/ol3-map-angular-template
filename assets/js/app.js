@@ -27,6 +27,7 @@ $(document).ready(function() {
    */
   require("jquery-resizable-dom");
   // define onDrag callback
+  /*
   var onDrag = function (e, $el, newWidth, newHeight, opt) {
     if ($(".content").width() <= 118) {
       if (newWidth < $el.width()) {
@@ -36,18 +37,17 @@ $(document).ready(function() {
       }
     }
   };
+  */
   // side panels resizable
   $(".panel-left").resizable({
     handleSelector: "#sp-left",
     resizeWidthFrom: "right",
-    resizeHeight: false,
-    onDrag: onDrag
+    resizeHeight: false
   });
   $(".panel-right").resizable({
     handleSelector: "#sp-right",
     resizeWidthFrom: "left",
-    resizeHeight: false,
-    onDrag: onDrag
+    resizeHeight: false
   });
   // content in left panel resizable
   $("#layers-list").resizable({
