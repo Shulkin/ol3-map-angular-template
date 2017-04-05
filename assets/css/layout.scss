@@ -1,7 +1,4 @@
-/*
- * Fullscreen Holy Grail Flexbox layout
- * More here: http://bl.ocks.org/jfsiii/5380802
- */
+/* Fullscreen Holy Grail Flexbox layout */
 /* Items flex vertically */
 .flex-column {
   display: flex;
@@ -14,42 +11,20 @@
 }
 /* With space between them */
 .space-between {justify-content: space-between;}
-// ===
-header, footer {
-  height: 5em;
-  min-height: 5em;
-}
-.container {
-  flex: 1;
-  min-height: 16em;
-}
-// ===
-.left {width: 15em;}
-.right {flex: 1;}
-.left {min-width: 8em;}
-.right {min-width: 16em;}
-// ===
-#legend {width: 15em;}
-#map {flex: 1;}
-#legend, #map {min-width: 7.5em;}
-// ===
-#layers-list {height: 15em;}
-#tools {flex: 1;}
-#layers-list, #tools {min-height: 7.5em;}
-// ===
 /* Header and footer fixed height */
-//header, footer {height: 5em;}
+header, footer {
+  height: 5em; // basis height
+  min-height: 5em; // limit shrink
+}
 /* Container flex between header and footer */
-//.container {flex: 1;}
-/* Side panels fixed width, resizable */
-//.panel-left, .panel-right {width: 15em;}
-/* layers list fixed height, resizable */
-//#layers-list {height: 15em;}
-/* Tools takes remaining space in left panel */
-//#tools {flex: 1;}
-/* Limit elements height in left panel */
-//#layers-list, #tools {min-height: 8em;}
-/* Main content flex between panels */
-//.content {flex: 1;}
-/* Limit elements width in container */
-//.content, .panel-left, .panel-right {min-width: 8em;}
+.container {flex: 1; min-height: 16em;}
+/* Left fixed width, resizable */
+.left {width: 15em; min-width: 8em;}
+// Layers list fixed height, tools takes remaining space
+#layers-list {height: 15em; min-height: 7.5em;}
+#tools {flex: 1; min-height: 7.5em;}
+/* Right takes remaining space in container */
+.right {flex: 1; min-width: 16em;}
+// Legend fixed width, map takes remaining space
+#legend {width: 15em; min-width: 7.5em;}
+#map {flex: 1; min-width: 7.5em;}
