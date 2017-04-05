@@ -25,7 +25,7 @@ $(document).ready(function() {
    * Use small jQuery plugin by Rick Strahl to make DOM elements resizable
    * More here: https://github.com/RickStrahl/jquery-resizable
    */
-  require("jquery-resizable-dom");
+  // require("jquery-resizable-dom");
   // define onDrag callback
   /*
   var onDrag = function (e, $el, newWidth, newHeight, opt) {
@@ -38,6 +38,7 @@ $(document).ready(function() {
     }
   };
   */
+  /*
   // side panels resizable
   $(".panel-left").resizable({
     handleSelector: "#sp-left",
@@ -54,4 +55,5 @@ $(document).ready(function() {
     handleSelector: "#sp-layers",
     resizeWidth: false
   });
+  */
 });

@@ -29,6 +29,4 @@ header, footer {height: 5em;}
 /* Main content flex between panels */
 .content {flex: 1;}
 /* Limit elements width in container */
-.content, .panel-left, .panel-right {
-  min-width: 8em;
-}
+.content, .panel-left, .panel-right {min-width: 8em;}
