@@ -15,8 +15,14 @@
 /* With space between them */
 .space-between {justify-content: space-between;}
 // ===
-header, footer {height: 5em;}
-.container {flex: 1;}
+header, footer {
+  height: 5em;
+  min-height: 5em;
+}
+.container {
+  flex: 1;
+  min-height: 16em;
+}
 // ===
 .left {width: 15em;}
 .right {flex: 1;}
@@ -25,7 +31,11 @@ header, footer {height: 5em;}
 // ===
 #legend {width: 15em;}
 #map {flex: 1;}
-#legend, #map {min-width: 8em;}
+#legend, #map {min-width: 7.5em;}
+// ===
+#layers-list {height: 15em;}
+#tools {flex: 1;}
+#layers-list, #tools {min-height: 7.5em;}
 // ===
 /* Header and footer fixed height */
 //header, footer {height: 5em;}

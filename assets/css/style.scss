@@ -18,10 +18,11 @@ header, footer {
 }
 .container {
   margin: 0 .25em;
-  min-height: 6.25em;
+  // min-height: 6.25em;
 }
 header, footer,
-.left, #map, #legend {
+#layers-list, #tools,
+#map, #legend {
   padding: .25em;
   border: 1px solid #888;
   // scroll overflow content

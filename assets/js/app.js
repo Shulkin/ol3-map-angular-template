@@ -15,7 +15,8 @@ $(document).ready(function() {
   var debug = require("./debug.js");
   debug.generateLorem([
     {target: $("header"), preset: "medium"},
-    {target: $(".left"), preset: "medium"},
+    {target: $("#layers-list"), preset: "medium"},
+    {target: $("#tools"), preset: "medium"},
     {target: $("#map"), preset: "medium"},
     {target: $("#legend"), preset: "medium"},
     {target: $("footer"), preset: "medium"}
@@ -39,6 +40,10 @@ $(document).ready(function() {
     handleSelector: "#sp-legend",
     resizeWidthFrom: "left",
     resizeHeight: false
+  });
+  $("#layers-list").resizable({
+    handleSelector: "#sp-layers",
+    resizeWidth: false
   });
   // ===
   /*
