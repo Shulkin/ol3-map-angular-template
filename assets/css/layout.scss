@@ -14,19 +14,32 @@
 }
 /* With space between them */
 .space-between {justify-content: space-between;}
-/* Header and footer fixed height */
+// ===
 header, footer {height: 5em;}
-/* Container flex between header and footer */
 .container {flex: 1;}
+// ===
+.left {width: 15em;}
+.right {flex: 1;}
+.left {min-width: 8em;}
+.right {min-width: 16em;}
+// ===
+#legend {width: 15em;}
+#map {flex: 1;}
+#legend, #map {min-width: 8em;}
+// ===
+/* Header and footer fixed height */
+//header, footer {height: 5em;}
+/* Container flex between header and footer */
+//.container {flex: 1;}
 /* Side panels fixed width, resizable */
-.panel-left, .panel-right {width: 15em;}
+//.panel-left, .panel-right {width: 15em;}
 /* layers list fixed height, resizable */
-#layers-list {height: 15em;}
+//#layers-list {height: 15em;}
 /* Tools takes remaining space in left panel */
-#tools {flex: 1;}
+//#tools {flex: 1;}
 /* Limit elements height in left panel */
-#layers-list, #tools {min-height: 8em;}
+//#layers-list, #tools {min-height: 8em;}
 /* Main content flex between panels */
-.content {flex: 1;}
+//.content {flex: 1;}
 /* Limit elements width in container */
-.content, .panel-left, .panel-right {min-width: 8em;}
+//.content, .panel-left, .panel-right {min-width: 8em;}

@@ -1,4 +1,13 @@
 /* Color elements for debug */
+body {background-color: #eee;} // light grey
+header {background-color: #d15e5e;} // light red
+.container {background-color: #e6abd2;} // very light magenta
+.left {background-color: #a0db85;} // very light green
+.right {background-color: #b4b5e6;} // very light blue
+#map {background-color: #701313;} // dark red
+#legend {background-color: #211b96;} // medium blue
+footer {background-color: #d9c4a8;} // light brown
+/*
 body {background-color: #eee;}
 header {background-color: #db5252;}
 .container {background-color: #e478bf;}
@@ -8,3 +17,4 @@ header {background-color: #db5252;}
 .content {background-color: #27cc5a;}
 .panel-right {background-color: #6fb8ed;}
 footer {background-color: #e29f2e;}
+*/
