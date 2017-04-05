@@ -20,11 +20,11 @@ header, footer {
 .container {flex: 1; min-height: 16em;}
 /* Left fixed width, resizable */
 .left {width: 15em; min-width: 8em;}
-// Layers list fixed height, tools takes remaining space
+// Layers list fixed height, tools takes remaining space in left
 #layers-list {height: 15em; min-height: 7.5em;}
 #tools {flex: 1; min-height: 7.5em;}
 /* Right takes remaining space in container */
 .right {flex: 1; min-width: 16em;}
-// Legend fixed width, map takes remaining space
+// Legend fixed width, map takes remaining space in right
 #legend {width: 15em; min-width: 7.5em;}
 #map {flex: 1; min-width: 7.5em;}
