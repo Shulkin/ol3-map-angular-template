@@ -21,10 +21,8 @@ $(document).ready(function() {
     {target: $("#legend"), preset: "medium"},
     {target: $("footer"), preset: "medium"}
   ]);
-  // utility function
-  var resetWidth = function(target) {
-    target.width(target.width());
-  };
+  // require utilities
+  var utils = require("./utils.js");
   /*
    * Use small jQuery plugin by Rick Strahl to make DOM elements resizable
    * More here: https://github.com/RickStrahl/jquery-resizable
@@ -39,10 +37,10 @@ $(document).ready(function() {
      * Slightly increases usability when resizing
      */
     onDrag: function(e, $el, newWidth, newHeight, opt) {
-      resetWidth($("#legend"));
+      utils.resetWidth($("#legend"));
     },
     onDragEnd: function(e, $el, opt) {
-      resetWidth($el);
+      utils.resetWidth($el);
     }
   });
   $("#legend").resizable({
@@ -51,7 +49,7 @@ $(document).ready(function() {
     resizeHeight: false,
     /* The same hack here */
     onDragEnd: function(e, $el, opt) {
-      resetWidth($el);
+      utils.resetWidth($el);
     }
   });
   $("#layers-list").resizable({
@@ -61,7 +59,7 @@ $(document).ready(function() {
   /* Third hack */
   window.addEventListener("resize", function(event) {
     // prevents side panels from changing width on resize
-    resetWidth($("#legend"));
-    resetWidth($(".left"));
+    utils.resetWidth($("#legend"));
+    utils.resetWidth($(".left"));
   });
 });
