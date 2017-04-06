@@ -29,12 +29,26 @@ $(document).ready(function() {
   $(".left").resizable({
     handleSelector: "#sp-left",
     resizeWidthFrom: "right",
-    resizeHeight: false
+    resizeHeight: false,
+    onDrag: function(e, $el, newWidth, newHeight, opt) {
+      if ($(".content").width() <= 118) {
+        if (newWidth < $el.width()) {
+          return false;
+        }
+      }
+    }
   });
   $("#legend").resizable({
     handleSelector: "#sp-legend",
     resizeWidthFrom: "left",
-    resizeHeight: false
+    resizeHeight: false,
+    onDrag: function(e, $el, newWidth, newHeight, opt) {
+      if ($(".content").width() <= 118) {
+        if (newWidth < $el.width()) {
+          return false;
+        }
+      }
+    }
   });
   $("#layers-list").resizable({
     handleSelector: "#sp-layers",
