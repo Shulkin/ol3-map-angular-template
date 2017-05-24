@@ -11,6 +11,10 @@ $ cd ol3-map-angular-template
 $ npm install
 ```
 
+## Try demo
+
+[ol3-map-angular-template](https://shulkin.github.io/ol3-map-angular-template/dist)
+
 ## Usage
 
 Start development webpack server
@@ -19,13 +23,13 @@ Start development webpack server
 $ npm run dev
 ```
 
-Build production
+Build production to **dist/**
 
 ```bash
 $ npm run build
 ```
 
-Start server
+Start server. Serve production version from **dist/**
 
 ```bash
 $ npm start

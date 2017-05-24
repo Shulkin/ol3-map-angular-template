@@ -21,7 +21,7 @@ app.use(methodOverride());
 // default route to build/index.html
 app.get("*", function(req ,res) {
   // anything else is up to Angular
-  res.sendFile("assets/index.html");
+  res.sendFile("assets/index.html"); //!! change to /dist
 });
 // === Start server ===
 app.listen(port);
