@@ -11,17 +11,17 @@ var app = express();
 var port = process.env.PORT || 3000;
 // === Configure ===
 // set up express middleware
-app.use(favicon(path.resolve(__dirname, "assets", "favicon.ico")));
-app.use(express.static(path.resolve(__dirname, "assets")));
+app.use(favicon(path.resolve(__dirname, "dist", "favicon.ico")));
+app.use(express.static(path.resolve(__dirname, "dist")));
 app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json({type: "application/vnd.api+json"}));
 app.use(methodOverride());
-// default route to build/index.html
+// default route to dist/index.html
 app.get("*", function(req ,res) {
   // anything else is up to Angular
-  res.sendFile("assets/index.html"); //!! change to /dist
+  res.sendFile("dist/index.html");
 });
 // === Start server ===
 app.listen(port);

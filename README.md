@@ -29,7 +29,7 @@ Build production to **dist/**
 $ npm run build
 ```
 
-Start server. Serve production version from **dist/**
+Start server from **dist/**
 
 ```bash
 $ npm start

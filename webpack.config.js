@@ -6,7 +6,7 @@ var config = {
   entry: "./js/app.js",
   output: {
     // place output bundle here
-    path: path.resolve(__dirname, "assets"),
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
   // watch files for changes
@@ -33,12 +33,18 @@ var config = {
       include: [path.resolve(__dirname, "assets/css")],
       // the order of use is backward!
       use: ["style-loader", "css-loader", "sass-loader"]
+    }, {
+      // copy static html and favicon
+      test: /\.(html|ico)$/,
+      // look in root assets
+      include: [path.resolve(__dirname, "assets")],
+      use: ["file-loader?name=[path][name].[ext]"]
     }]
   },
   // configure development server
   devServer: {
-    // serve content from assets folder
-    contentBase: path.resolve(__dirname, "assets"),
+    // serve content from dist folder
+    contentBase: path.resolve(__dirname, "dist"),
     compress: true, // enable gzip compression
     port: 3001 // default port
   }
