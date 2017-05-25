@@ -36,8 +36,9 @@ var config = {
     }, {
       // copy static html and favicon
       test: /\.(html|ico)$/,
-      // look in root assets
+      // look in root src
       include: [path.resolve(__dirname, "src")],
+      // copy them with file-loader
       use: ["file-loader?name=[path][name].[ext]"]
     }]
   },

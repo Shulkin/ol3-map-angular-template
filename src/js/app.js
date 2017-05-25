@@ -1,4 +1,4 @@
-/* === Main entry point to application === */
+/* === Main application logic === */
 // load utilities
 var $ = require("jquery");
 // save for jQuery plugins
