@@ -1,12 +1,4 @@
 /* === Main entry point to application === */
-// require static assets
-require("../index.html");
-require("../favicon.ico");
-// require styles
-require("../css/style.scss");
-require("../css/layout.scss");
-require("../css/splitter.scss");
-require("../css/colors.scss");
 // load utilities
 var $ = require("jquery");
 // save for jQuery plugins
@@ -15,7 +7,7 @@ window.$ = $;
 // start application
 $(document).ready(function() {
   // fill elements with random lorem ipsum
-  var debug = require("./debug.js");
+  var debug = require("debug.js");
   debug.generateLorem([
     {target: $("header"), preset: "medium"},
     {target: $("#layers-list"), preset: "medium"},
@@ -25,7 +17,7 @@ $(document).ready(function() {
     {target: $("footer"), preset: "medium"}
   ]);
   // require utilities
-  var utils = require("./utils.js");
+  var utils = require("utils.js");
   /*
    * Use small jQuery plugin by Rick Strahl to make DOM elements resizable
    * More here: https://github.com/RickStrahl/jquery-resizable
