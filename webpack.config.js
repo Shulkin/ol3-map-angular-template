@@ -3,7 +3,7 @@ var config = {
   // starting at src folder
   context: path.resolve(__dirname, "src"),
   // main entry point to application
-  entry: "./index.js",
+  entry: "./js/index.js",
   output: {
     // place output bundle here
     path: path.resolve(__dirname, "dist"),

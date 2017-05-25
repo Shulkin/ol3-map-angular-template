@@ -7,7 +7,7 @@ window.$ = $;
 // start application
 $(document).ready(function() {
   // fill elements with random lorem ipsum
-  var debug = require("debug.js");
+  var debug = require("./debug.js");
   debug.generateLorem([
     {target: $("header"), preset: "medium"},
     {target: $("#layers-list"), preset: "medium"},
@@ -17,7 +17,7 @@ $(document).ready(function() {
     {target: $("footer"), preset: "medium"}
   ]);
   // require utilities
-  var utils = require("utils.js");
+  var utils = require("./utils.js");
   /*
    * Use small jQuery plugin by Rick Strahl to make DOM elements resizable
    * More here: https://github.com/RickStrahl/jquery-resizable
